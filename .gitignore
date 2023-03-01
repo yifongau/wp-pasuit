@@ -1,29 +1,26 @@
-# ignore everything in the "wp-content" directory, except:
-# mu-plugins, plugins, and themes directories
+# ignore everything in the root directory,
+# but descend into directories
 *
-!themes/
-!plugins/
+!*/
 
-# ignore all mu-plugins, plugins, and themes
-# unless explicitly whitelisted at the end of this file
-themes/*
 
-# ignore index.php in plugins folder
-./plugins/index.php
+# track themes, mu-plugins and plugins directory
+!themes/**
+!mu-plugins/**
+!plugins/**
+
+# ignore index.php in different places
+plugins/index.php
+themes/index.php
 
 # ignore all files starting with . or ~
 .*
 ~*
 
-# ignore node dependency directories (used by grunt)
+# ignore npm/composer tooling stuff
 node_modules/
-
-# ignore  composer dependency directories
 vendor/
-
-# ignore npm/composer tooling directories
 raw
-node_modules
 nyc_output
 coverage
 test-treeshake/*-umd.js
@@ -35,7 +32,7 @@ cjs
 ehthumbs.db
 Thumbs.db
 
-# ignore Editor files
+# ignore editor files
 *.sublime-project
 *.sublime-workspace
 *.komodoproject
@@ -66,10 +63,6 @@ Thumbs.db
 *.tar
 *.zip
 
-# -------------------------
-# BEGIN Whitelisted Files
-# -------------------------
-
 # track these files, if they exist
 !.gitignore
 !.editorconfig
@@ -77,12 +70,4 @@ Thumbs.db
 !README.md
 !CHANGELOG.md
 !composer.json
-
-# track these themes
-!themes/pasuit/
-!themes/pasuit/*
-
-# track these themes
-!plugins/akismet/
-!plugins/akismet/*
 
