@@ -138,8 +138,8 @@ add_action( 'widgets_init', 'pasuit_widgets_init' );
  * Enqueue scripts and styles.
  */
 
-$debug = get_template_directory_uri() . 'parsa/theme/plugins/bootstrap/bootstrap.min.css';
-echo $debug;
+//$debug = get_template_directory_uri() . 'parsa/theme/plugins/bootstrap/bootstrap.min.css';
+//echo $debug;
 
 function pasuit_scripts() {
   // dependencies

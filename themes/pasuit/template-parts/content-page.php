@@ -10,8 +10,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+      
+      <header class="entry-header">
+		<?php the_title( '<h2 class="mb-4">', '</h2>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php pasuit_post_thumbnail(); ?>
@@ -29,7 +33,9 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
+  <?php if ( get_edit_post_link() ) : ?>
+
+
 		<footer class="entry-footer">
 			<?php
 			edit_post_link(
@@ -50,5 +56,8 @@
 			);
 			?>
 		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+  <?php endif; ?>
+      </div>
+    </div>
+  </div>
 </article><!-- #post-<?php the_ID(); ?> -->

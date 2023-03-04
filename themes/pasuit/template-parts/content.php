@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="entry-header section bg-secondary">
+  <header class="section bg-secondary">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">

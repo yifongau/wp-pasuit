@@ -10,8 +10,13 @@
 ?>
 
 <section class="no-results not-found">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'pasuit' ); ?></h1>
+		<h2 class="page-title mb-4"><?php esc_html_e( 'Nothing Found', 'pasuit' ); ?></h2>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -47,5 +52,8 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
+  </div><!-- .page-content -->
+      </div>
+    </div>
+  </div>
 </section><!-- .no-results -->
