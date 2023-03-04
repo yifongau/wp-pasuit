@@ -10,28 +10,36 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+  <header class="entry-header section bg-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		endif;?>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				pasuit_posted_on();
-				pasuit_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+        </div>
+      </div>
+    </div>
 	</header><!-- .entry-header -->
 
-	<?php pasuit_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content container">
+    <div class="row">
+      <div class="col-lg-8">
+<?php
+		if ( 'post' === get_post_type() ) :
+			?>
+        <ul class="list-inline d-flex justify-content-between py-3 ">
+        <li class="list-inline-item"><i class="ti-user mr-2"></i><?php pasuit_posted_by() ?></li>
+        <li class="list-inline-item"><i class="ti-calendar mr-2"></i><?php pasuit_posted_on() ?></li>
+        </ul>
+    <?php endif; ?>
+  <?php pasuit_post_thumbnail(); ?>
+<div class="content">
 		<?php
 		the_content(
 			sprintf(
@@ -54,7 +62,11 @@
 				'after'  => '</div>',
 			)
 		);
-		?>
+    ?>
+
+        </div>
+      </div>
+    </div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
