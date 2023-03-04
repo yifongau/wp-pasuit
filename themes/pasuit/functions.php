@@ -137,9 +137,20 @@ add_action( 'widgets_init', 'pasuit_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+$debug = get_template_directory_uri() . 'parsa/theme/plugins/bootstrap/bootstrap.min.css';
+echo $debug;
+
 function pasuit_scripts() {
-	wp_enqueue_style( 'pasuit-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'pasuit-style', 'rtl', 'replace' );
+  // dependencies
+  wp_enqueue_style('bootstrap', get_template_directory_uri() . '/parsa/theme/plugins/bootstrap/bootstrap.min.css');
+  wp_enqueue_style('slick', get_template_directory_uri() . '/parsa/theme/plugins/slick/slick.css');
+  wp_enqueue_style('themify', get_template_directory_uri() . '/parsa/theme/plugins/themifiy-icons/themify-icons.css');
+
+//  wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
+
+  // loads main style.css
+  wp_enqueue_style( 'pasuit-style', get_stylesheet_uri(), array('bootstrap', 'slick', 'themify'), _S_VERSION );
 
 	wp_enqueue_script( 'pasuit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 

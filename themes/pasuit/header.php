@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pasuit' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="navigation">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
