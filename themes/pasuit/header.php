@@ -25,19 +25,18 @@
 <div id="page" class="site">
   <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pasuit' ); ?></a>
 
-<!-- 
   <header id="masthead" class="navigation">
-
+    <nav id="site-navigation" class="navbar navbar-expand-lg navbar-light">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title navbar"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title navbar"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			endif;
 			$pasuit_description = get_bloginfo( 'description', 'display' );
@@ -47,21 +46,24 @@
 			<?php endif; ?>
 		</div>
 
-    <nav id="site-navigation" class="navbar navbar-expand-lg navbar-light">
 
+<div class="collapse navbar-collapse text-center">
+<ul class="navbar-nav ml-auto">
+<?php
+        $categories = get_categories( array(
+    "hide_empty" => 0,
+    'orderby' => 'name',
+    'order'   => 'ASC',
+    'exclude' => '1'
+) );
 
-			<button class="navbar-toggler border-0" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pasuit' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+      foreach( $categories as $category ) {
+ echo '<div class="nav-item"><a class="nav-link text-uppercase text-dark" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';   
+} ?>
+</ul>
+</div>
 		</nav>
   </header>
--->
 
 <!-- HARDCODED NAVBAR -->
 <header class="navigation">

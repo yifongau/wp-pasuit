@@ -51,7 +51,8 @@ function pasuit_setup() {
 		array(
 			'menu-1' => esc_html__( 'Primary', 'pasuit' ),
 		)
-	);
+  );
+
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -147,7 +148,15 @@ function pasuit_scripts() {
   wp_enqueue_style('slick', get_template_directory_uri() . '/parsa/theme/plugins/slick/slick.css');
   wp_enqueue_style('themify', get_template_directory_uri() . '/parsa/theme/plugins/themifiy-icons/themify-icons.css');
 
-//  wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
+  wp_enqueue_script( 'parsa_jquery', '/parsa/theme/plugins/jQuery/jquery.min.js' );
+  wp_enqueue_script( 'bootstrap-js', '/parsa/theme/plugins/bootstrap/bootstrap.min.js', array('jquery') );
+
+//<script src="plugins/slick/slick.min.js"></script>
+//<script src="plugins/masonry/masonry.js"></script>
+//<script src="plugins/instafeed/instafeed.min.js"></script>
+//<script src="plugins/smooth-scroll/smooth-scroll.js"></script>
+//<script src="plugins/headroom/headroom.js"></script>
+//<script src="plugins/reading-time/readingTime.min.js"></script>
 
   // loads main style.css
   wp_enqueue_style( 'pasuit-style', get_stylesheet_uri(), array('bootstrap', 'slick', 'themify'), _S_VERSION );
