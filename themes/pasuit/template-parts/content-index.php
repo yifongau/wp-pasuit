@@ -9,8 +9,6 @@
 
 ?>
 
-  <div class="container">
-    <div class="row masonry-container">
       <div class="col-lg-4 col-sm-6 mb-5">
 <article class="text-center" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
@@ -23,6 +21,4 @@
 		endif;?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
-</div>
-</div>
 </div>

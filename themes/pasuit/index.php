@@ -16,6 +16,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+  <div class="container">
+    <div class="row masonry-container">
 
 		<?php
 		if ( have_posts() ) :
@@ -48,7 +50,8 @@ while ( have_posts() ) :
 
 		endif;
 		?>
-
+</div>
+</div>
 	</main><!-- #main -->
 
 <?php
