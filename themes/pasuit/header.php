@@ -59,6 +59,13 @@
 
       foreach( $categories as $category ) {
  echo '<div class="nav-item"><a class="nav-link text-uppercase text-dark" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';   
+      } ?>
+
+<?php
+        $pages = get_pages();
+
+      foreach( $pages as $page ) {
+ echo '<div class="nav-item"><a class="nav-link text-uppercase text-dark" href="' . get_page_link($page->ID) . '">' . $page->post_title . '</a></div>';   
 } ?>
 </ul>
 </div>
