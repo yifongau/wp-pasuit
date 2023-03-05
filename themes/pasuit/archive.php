@@ -14,14 +14,22 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+<section class="hero-section">
+<div class="container">
+<div class="row">
+      <div class="col-lg-6 align-self-end">
+
+        <h1 class="mb-0">Signalementen</h1>
+<?php
+				single_term_title( '<h2 class="mb-100 title-border-lg">', '</h2>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
 
-			<?php
+        </div>
+<div class="col-lg text-right">
+</div>
+
+<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -42,10 +50,12 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-		?>
-
+?>
+</div>
+</div>
+</div>
+</section>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
