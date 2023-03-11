@@ -25,29 +25,19 @@
 <div id="page" class="site">
   <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pasuit' ); ?></a>
 
-  <header id="masthead" class="navigation">
+  <header class="navigation">
     <nav id="site-navigation" class="navbar navbar-expand-lg navbar-light">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title navbar"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<h1 class="site-title navbar"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			endif;
-			$pasuit_description = get_bloginfo( 'description', 'display' );
-			if ( $pasuit_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $pasuit_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div>
 
+    <a class="navbar-brand navbar-collapse center" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/images/logo-pasuit.png" alt="pasuit">
+    </a>
 
-<div class="collapse navbar-collapse text-center">
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
+      aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+<div class="collapse navbar-collapse text-center" id="navogation">
 <ul class="navbar-nav ml-auto">
 <?php
         $categories = get_categories( array(
