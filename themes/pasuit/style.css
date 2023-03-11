@@ -353,7 +353,7 @@ a:hover, a.text-dark:hover {
 }
 
 .font-secondary {
-  font-family: "hanskendrick" !important;
+  font-family: "Atkinson Hyperlegible" !important;
 }
 
 .mb-10 {
@@ -569,7 +569,7 @@ textarea.form-control {
   }
 }
 .pagination .page-item .page-link {
-  font-family: "hanskendrick";
+  font-family: "Inter";
   font-size: 30px;
   border: 0;
   color: #585757;

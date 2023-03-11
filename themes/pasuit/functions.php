@@ -158,7 +158,7 @@ function pasuit_scripts() {
 
 
   // loads main style.css
-  wp_enqueue_style( 'pasuit-style', get_stylesheet_uri(), array('bootstrap', 'slick', 'themify') );
+  wp_enqueue_style( 'pasuit-style', get_stylesheet_uri(), array('bootstrap', 'slick', 'themify'), null);
 
 	wp_enqueue_script( 'pasuit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), );
 
