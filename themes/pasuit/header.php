@@ -26,9 +26,9 @@
   <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pasuit' ); ?></a>
 
   <header class="navigation">
-    <nav id="site-navigation" class="navbar navbar-expand-lg navbar-light">
+    <nav id="site-navigation" class="navbar navbar-expand-lg navbar-light bg-secondary">
 
-    <a class="navbar-brand navbar-collapse center" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/images/logo-pasuit.png" alt="pasuit">
     </a>
 

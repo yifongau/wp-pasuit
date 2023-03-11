@@ -146,7 +146,7 @@ add_action( 'widgets_init', 'pasuit_widgets_init' );
 
 function pasuit_scripts() {
   // dependencies
-  wp_enqueue_style('bootstrap', get_template_directory_uri() . '/parsa/theme/plugins/bootstrap/bootstrap.min.css');
+  wp_enqueue_style('bootstrap', get_template_directory_uri() . '/parsa/theme/plugins/bootstrap/bootstrap.min.css', array(), null);
   wp_enqueue_style('slick', get_template_directory_uri() . '/parsa/theme/plugins/slick/slick.css');
   wp_enqueue_style('themify', get_template_directory_uri() . '/parsa/theme/plugins/themify-icons/themify-icons.css');
 
@@ -160,7 +160,7 @@ function pasuit_scripts() {
   // loads main style.css
   wp_enqueue_style( 'pasuit-style', get_stylesheet_uri(), array('bootstrap', 'slick', 'themify') );
 
-	wp_enqueue_script( 'pasuit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'pasuit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

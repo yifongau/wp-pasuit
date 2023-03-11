@@ -16,7 +16,10 @@
 <div class="container">
 <div class="row">
 <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-Korte tekst over pasuit
+    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/images/logo-pasuit.png" alt="pasuit">
+</a>
+</div>
 </div>
 </div>
 </div>

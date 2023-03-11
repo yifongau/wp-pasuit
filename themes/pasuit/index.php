@@ -15,7 +15,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+
+<section class="section">
   <div class="container">
     <div class="row masonry-container">
 
@@ -52,6 +54,7 @@ while ( have_posts() ) :
 		?>
 </div>
 </div>
+</section>
 	</main><!-- #main -->
 
 <?php

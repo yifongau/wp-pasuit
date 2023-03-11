@@ -14,14 +14,13 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-<section class="hero-section">
+<section class="section">
 <div class="container">
 <div class="row">
       <div class="col-lg-6 align-self-end">
 
-        <h1 class="mb-0">Signalementen</h1>
 <?php
-				single_term_title( '<h2 class="mb-100 title-border-lg">', '</h2>' );
+				single_term_title( '<h2 class="title-border-lg">', '</h2>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 
@@ -32,9 +31,9 @@ get_header();
 </div>
 </section>
 
-<section class="section">
+<section>
 <div class="container">
-<div class="row">
+<div class="row masonry-container">
 <?php
 			/* Start the Loop */
 			while ( have_posts() ) :
