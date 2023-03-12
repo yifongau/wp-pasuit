@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="container">
+  <div class="container section">
     <div class="row">
     <div class="col-lg-12">
       
