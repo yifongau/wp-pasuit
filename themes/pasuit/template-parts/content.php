@@ -34,7 +34,7 @@
 		if ( 'post' === get_post_type() ) :
 			?>
         <ul class="list-inline d-flex justify-content-between py-3 ">
-        <li class="list-inline-item"><i class="ti-user mr-2"></i><?php pasuit_posted_by() ?></li>
+        <li class="list-inline-item"><i class="ti-user mr-2"></i><?php echo get_post_meta( get_the_ID(), 'book_title', true ) ?></li>
         <li class="list-inline-item"><i class="ti-calendar mr-2"></i>Geplaatst op <?php echo get_the_date() ?></li>
         </ul>
     <?php endif; ?>
