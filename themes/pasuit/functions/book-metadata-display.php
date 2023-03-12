@@ -33,7 +33,7 @@ function display_book_data ( $content ) {
 			$content .= '<ul class="card-text list-unstyled">';
       if ( !empty( $book_translator ) && !empty( $book_source_lang ) 
           ) {
-          $content .= '<li class="mb-0">Vertaalt uit het ' . esc_html( $book_source_lang) . ' door ' . esc_html( $book_translator ) . "</li>";
+          $content .= '<li class="mb-0">Vertaald uit het ' . esc_html( $book_source_lang) . ' door ' . esc_html( $book_translator ) . "</li>";
       }
 			$content .= '<li class="mb-0">' . esc_html( $book_publisher ) . " ";
       $content .= '(' . esc_html( $book_pub_date ) . ')';
