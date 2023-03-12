@@ -65,7 +65,8 @@
 				),
 				wp_kses_post( get_the_title() )
 			)
-		);
+    );
+
 
 		wp_link_pages(
 			array(

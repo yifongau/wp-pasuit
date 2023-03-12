@@ -23,6 +23,7 @@ function book_meta_box( $post ) {
 	$book_genre_backend = esc_html( get_post_meta( $post->ID, 'book_genre_backend', true ) );
 	$book_publisher = esc_html( get_post_meta( $post->ID, 'book_publisher', true ) );
 	$book_pub_date = esc_html( get_post_meta( $post->ID, 'book_pub_date', true ) );
+	$book_pub_pages = esc_html( get_post_meta( $post->ID, 'book_pages', true ) );
 	$book_source_lang = esc_html( get_post_meta( $post->ID, 'book_source_lang', true ) );
 	$book_target_lang = esc_html( get_post_meta( $post->ID, 'book_target_lang', true ) );
 	?>
@@ -53,6 +54,7 @@ function book_meta_box( $post ) {
 				<input type='text' size="40" name='book_genre_frontend' value='Wordt bepaald door ‘categorie’.' readonly />
 			</td>
 		</tr>
+    <tr>
 			<td style="width: 100px">Genre</td>
 			<td>
       <input type='text' size="40" name='book_genre_backend' value='<?php echo $book_genre_backend; ?>' />
@@ -71,10 +73,17 @@ function book_meta_box( $post ) {
 			</td>
 		</tr>
 		<tr>
+			<td>Aantal blz.</td>
+			<td>
+				<input type='text' size="40" name='book_pages' value='<?php echo $book_pages; ?>' />
+			</td>
+		</tr>
+		<tr>
 			<td>Brontaal</td>
 			<td>
 				<input type='text' size="40" name='book_source_lang' value='<?php echo $book_source_lang; ?>' />
 			</td>
+		</tr>
 		<tr>
 			<td>Doeltaal (indien v.t. )</td>
 			<td>
@@ -115,6 +124,9 @@ function save_book_data( $post_id = false, $post = false ) {
 			update_post_meta( $post_id, 'book_pub_date', sanitize_text_field( $_POST['book_pub_date'] ) );
 		}
 
+		if ( isset( $_POST['book_pages'] ) ) {
+			update_post_meta( $post_id, 'book_pages', sanitize_text_field( $_POST['book_pages'] ) );
+		}
 		if ( isset( $_POST['book_source_lang'] ) ) {
 			update_post_meta( $post_id, 'book_source_lang', sanitize_text_field( $_POST['book_source_lang'] ) );
 		}
