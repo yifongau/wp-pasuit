@@ -10,16 +10,28 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="section">
+  <header class="section pb-0">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-		<?php
+<?php
 		if ( is_singular() ) :
-			the_title( '<h2 class="entry-title title-border-lg">', '</h2>' );
-		else :
-			the_title( '<h2 class="entry-title title-border-lg"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;?>
+?>
+        <div class="col-lg-3 col-sm-3">
+<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+<img class="img-fluid mb-4" src="<?php echo $url ?>" />
+</div>
+        <div class="col-lg-6 col-sm-6">
+<p style="text-transform: uppercase"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></p>
+<h3><i><?php echo get_post_meta( get_the_ID(), 'book_title', true) ?></i></h3>
+<h4>
+  <?php echo get_post_meta( get_the_ID(), 'book_author', true) ?>
+</h4>
+<h4>
+<?php if ( !empty( get_post_meta( get_the_ID(), 'book_translator', true ) ) ) : ?>
+  (vert. <?php echo get_post_meta( get_the_ID(), 'book_translator', true) ?>)
+<?php endif; ?>
+</h4>
+<?php endif; ?>
 
         </div>
       </div>
@@ -27,18 +39,17 @@
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content container">
+	<div class="container">
     <div class="row">
       <div class="col-lg-8">
 <?php
 		if ( 'post' === get_post_type() ) :
 			?>
         <ul class="list-inline d-flex justify-content-between py-3 ">
-        <li class="list-inline-item"><i class="ti-user mr-2"></i><?php echo get_post_meta( get_the_ID(), 'book_title', true ) ?></li>
-        <li class="list-inline-item"><i class="ti-calendar mr-2"></i>Geplaatst op <?php echo get_the_date() ?></li>
+        <li class="list-inline-item"><i class="ti-user mr-2"></i><?php echo get_post_meta( get_the_ID(), 'real_author', true ) ?></li>
+        <li class="list-inline-item"><i class="ti-calendar mr-2"></i><?php echo get_the_date() ?></li>
         </ul>
     <?php endif; ?>
-  <?php pasuit_post_thumbnail(); ?>
 <div class="content">
 		<?php
 		the_content(

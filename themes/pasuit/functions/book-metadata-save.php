@@ -20,6 +20,7 @@ function book_meta_box( $post ) {
 	$book_title = esc_html( get_post_meta( $post->ID, 'book_title', true ) );
 	$book_author = esc_html( get_post_meta( $post->ID, 'book_author', true ) );
 	$book_translator = esc_html( get_post_meta( $post->ID, 'book_translator', true ) );
+	$book_genre_backend = esc_html( get_post_meta( $post->ID, 'book_genre_backend', true ) );
 	$book_publisher = esc_html( get_post_meta( $post->ID, 'book_publisher', true ) );
 	$book_pub_date = esc_html( get_post_meta( $post->ID, 'book_pub_date', true ) );
 	$book_source_lang = esc_html( get_post_meta( $post->ID, 'book_source_lang', true ) );
@@ -45,10 +46,16 @@ function book_meta_box( $post ) {
 			<td>
 				<input type='text' size="40" name='book_translator' value='<?php echo $book_translator; ?>' />
 			</td>
+    </tr>
+    <tr>
+			<td style="width: 100px">Genre (zichtbaar)</td>
+			<td>
+				<input type='text' size="40" name='book_genre_frontend' value='Wordt bepaald door ‘categorie’.' readonly />
+			</td>
 		</tr>
 			<td style="width: 100px">Genre</td>
 			<td>
-				<input type='text' size="40" name='book_genre' value='Zie categorie.' readonly />
+      <input type='text' size="40" name='book_genre_backend' value='<?php echo $book_genre_backend; ?>' />
 			</td>
 		</tr>
 		<tr>
@@ -97,6 +104,9 @@ function save_book_data( $post_id = false, $post = false ) {
 			update_post_meta( $post_id, 'book_translator', sanitize_text_field( $_POST['book_translator'] ) );
 		}
 
+    if ( isset( $_POST['book_genre_backend'] ) ) {
+			update_post_meta( $post_id, 'book_genre_backend', sanitize_text_field( $_POST['book_genre_backend'] ) );
+		}
 		if ( isset( $_POST['book_publisher'] ) ) {
 			update_post_meta( $post_id, 'book_publisher', sanitize_text_field( $_POST['book_publisher'] ) );
 		}
