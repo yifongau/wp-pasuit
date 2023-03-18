@@ -46,7 +46,7 @@ function display_book_data ( $content ) {
       }
 
       // Bij vertaalde boeken: vertaald door ... uit het blabla
-      if ( !empty( $book_translator ) && !empty( $book_source_lang ) &&!empty ($book_target_lang)
+      if ( !empty( $book_translator ) && !empty( $book_source_lang ) && !empty ($book_target_lang)
       ) {
           $content .= '<li class="mb-0">Vertaald uit het ' . esc_html( $book_source_lang ) . ' door ' . esc_html( $book_translator ) . '</li>';
       }
