@@ -18,6 +18,7 @@ function register_meta_box() {
 function book_meta_box( $post ) { 
 	// Retrieve current source name and address based on post ID
 	$book_title = esc_html( get_post_meta( $post->ID, 'book_title', true ) );
+	$book_title_orig = esc_html( get_post_meta( $post->ID, 'book_title_orig', true ) );
 	$book_author = esc_html( get_post_meta( $post->ID, 'book_author', true ) );
 	$book_translator = esc_html( get_post_meta( $post->ID, 'book_translator', true ) );
 	$book_genre_backend = esc_html( get_post_meta( $post->ID, 'book_genre_backend', true ) );
@@ -37,13 +38,19 @@ function book_meta_box( $post ) {
 			</td>
 		</tr>
 		<tr>
+			<td style="width: 100px">Oorspronkelijke titel (indien v.t.)</td>
+			<td>
+				<input type='text' size="40" name='book_title_orig' value='<?php echo $book_title_orig; ?>' />
+			</td>
+		</tr>
+		<tr>
 			<td style="width: 100px">Auteur</td>
 			<td>
 				<input type='text' size="40" name='book_author' value='<?php echo $book_author; ?>' />
 			</td>
 		</tr>
 		<tr>
-			<td style="width: 100px">Vertaler</td>
+			<td style="width: 100px">Vertaler (indien v.t.)</td>
 			<td>
 				<input type='text' size="40" name='book_translator' value='<?php echo $book_translator; ?>' />
 			</td>
@@ -104,6 +111,10 @@ function save_book_data( $post_id = false, $post = false ) {
 		if ( isset( $_POST['book_title'] ) ) {
 			update_post_meta( $post_id, 'book_title', sanitize_text_field( $_POST['book_title'] ) );
 		}
+
+		if ( isset( $_POST['book_title_orig'] ) ) {
+			update_post_meta( $post_id, 'book_title_orig', sanitize_text_field( $_POST['book_title_orig'] ) );
+    }
 
 		if ( isset( $_POST['book_author'] ) ) {
 			update_post_meta( $post_id, 'book_author', sanitize_text_field( $_POST['book_author'] ) );

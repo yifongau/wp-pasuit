@@ -12,6 +12,7 @@ function display_book_data ( $content ) {
 	if ( in_array( get_post_type( get_the_ID() ), array( 'page','post' ) ) ) {
 		// Retrieve current source name and address for post
 		$book_title = get_post_meta( $post_id, 'book_title', true );
+		$book_title_orig = get_post_meta( $post_id, 'book_title_orig', true );
 		$book_author = get_post_meta( $post_id, 'book_author', true );
 		$book_translator = get_post_meta( $post_id, 'book_translator', true );
 		$book_genre_backend = get_post_meta( $post_id, 'book_genre_backend', true );
@@ -30,10 +31,24 @@ function display_book_data ( $content ) {
 			$content .= '<div class="card bg-light"><div class="card-body mb-0">';
 			$content .= '<h6 class="card-title mb-2">' . esc_html( $book_author );
 			$content .= ", <em>" . esc_html( $book_title ) . "</em></h6>";
-			$content .= '<ul class="card-text list-unstyled">';
-      if ( !empty( $book_translator ) && !empty( $book_source_lang ) 
+      $content .= '<ul class="card-text list-unstyled">';
+
+      // Oorspronkelijke titel
+      if (!empty ($book_title_orig)
           ) {
-          $content .= '<li class="mb-0">Vertaald uit het ' . esc_html( $book_source_lang) . ' door ' . esc_html( $book_translator ) . "</li>";
+            $content .= '<li class="mb-0"><em>' . esc_html( $book_title_orig) . '</li></em>';
+      }
+
+      // Bij onvertaalde boeken: brontaal
+      if ( !empty( $book_source_lang ) && empty( $book_target_lang)
+          ) {
+            $content .= '<li class="mb-0">' . esc_html( $book_source_lang ) . '</li>'; 
+      }
+
+      // Bij vertaalde boeken: vertaald door ... uit het blabla
+      if ( !empty( $book_translator ) && !empty( $book_source_lang ) &&!empty ($book_target_lang)
+      ) {
+          $content .= '<li class="mb-0">Vertaald uit het ' . esc_html( $book_source_lang ) . ' door ' . esc_html( $book_translator ) . '</li>';
       }
 			$content .= '<li class="mb-0">' . esc_html( $book_publisher ) . " ";
       $content .= '(' . esc_html( $book_pub_date ) . ')';
