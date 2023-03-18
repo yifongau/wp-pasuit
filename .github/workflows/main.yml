@@ -1,0 +1,21 @@
+on:
+  release:
+    types: [published]
+name: 🚀 Deploy new release of website
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.jacqvogelaar.nl
+        username: jacqvogel1
+        password: ${{ secrets.ftp_password }}
+        protocol: ftps
+        server-dir: /domains/pasuit.nl/public_html/wp-content/
+        dry-run: true
