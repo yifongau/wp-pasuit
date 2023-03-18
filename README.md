@@ -48,7 +48,7 @@ underscores. Hyperfocused on readability.
 
 # Links
 
-- https://github.com/Automattic/\_s
+- https://github.com/Automattic/_s
 - https://github.com/themefisher/parsa
 
 
