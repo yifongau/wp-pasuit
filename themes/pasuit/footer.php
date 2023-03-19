@@ -39,11 +39,14 @@
         
 <div id="mc_embed_signup_scroll">
 
-        <h6>Schrijf je in voor de nieuwsbrief:</h6>
+        <h6>Nieuwsbrief</h6>
 
-<div class="mc-field-group">
-	<input type="email" value="" name="EMAIL" class="required email form-control form-control-lg" id="mce-EMAIL" placeholder="E-mailadres" required>
-	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+<div class="mc-field-group form-group">
+<body>Blijf op de hoogte van nieuwe signalementen.</body>
+  <div class="input-group">
+	<input type="email" value="" name="EMAIL" class="required email form-control form-control" id="mce-EMAIL" placeholder="E-mailadres" required>
+  <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span><i class="fa fa-envelop"></i>
+  </div>
 </div>
 
 	<div id="mce-responses" class="clear foot">
@@ -55,7 +58,7 @@
 
        <div class="optionalParent">
             <div class="clear foot">
-                <input type="submit" value="Bevestigen" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary mt-2">
+                <input type="submit" value="Inschrijven" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
             </div>
         </div>
 
