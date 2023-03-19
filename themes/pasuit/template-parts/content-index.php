@@ -17,7 +17,6 @@
 <article class="text-center" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
 <img class="img-fluid mb-4" src="<?php echo $url ?>" />
-
 <h6 class="font-weight-normal text-uppercase"><?php $category = get_the_category(); echo $category[0]->cat_name; ?>
  // <?php echo get_post_meta( get_the_ID(), 'real_author', true) ?></h6>
 <h4 class="font-italic"><?php echo get_post_meta( get_the_ID(), 'book_title', true) ?></h4>

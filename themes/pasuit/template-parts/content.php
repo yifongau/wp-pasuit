@@ -16,11 +16,11 @@
 <?php
 		if ( is_singular() ) :
 ?>
-        <div class="col-lg-3 col-sm-3">
+        <div class="col-sm-3">
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
 <img class="img-fluid mb-4" src="<?php echo $url ?>" />
 </div>
-        <div class="col-lg-6 col-sm-6">
+        <div class="col-sm-9">
 <p style="text-transform: uppercase"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></p>
 <h3><i><?php echo get_post_meta( get_the_ID(), 'book_title', true) ?></i></h3>
 <h4>
