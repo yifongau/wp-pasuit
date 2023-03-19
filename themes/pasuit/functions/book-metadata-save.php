@@ -24,7 +24,7 @@ function book_meta_box( $post ) {
 	$book_genre_backend = esc_html( get_post_meta( $post->ID, 'book_genre_backend', true ) );
 	$book_publisher = esc_html( get_post_meta( $post->ID, 'book_publisher', true ) );
 	$book_pub_date = esc_html( get_post_meta( $post->ID, 'book_pub_date', true ) );
-	$book_pub_pages = esc_html( get_post_meta( $post->ID, 'book_pages', true ) );
+	$book_pages = esc_html( get_post_meta( $post->ID, 'book_pages', true ) );
 	$book_source_lang = esc_html( get_post_meta( $post->ID, 'book_source_lang', true ) );
 	$book_target_lang = esc_html( get_post_meta( $post->ID, 'book_target_lang', true ) );
 	?>
