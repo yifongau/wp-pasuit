@@ -1,18 +1,3 @@
-# ignore everything in the root directory,
-# but descend into directories
-*
-!*/
-
-
-# track themes, mu-plugins and plugins directory
-!themes/**
-!mu-plugins/**
-!plugins/**
-
-# ignore index.php in different places
-plugins/index.php
-themes/index.php
-
 # ignore all files starting with . or ~
 .*
 ~*

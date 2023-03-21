@@ -26,12 +26,11 @@ underscores. Hyperfocused on readability.
 - Guest author bio + list of 
 - Book author bio + further reading
 - Add search function/filter
-- Subscribe to newsletter form
 
 ## Post overviews
 
 - Uniform book cover cards
-- Separate untranslated works overview 
+- Untranslated works listing
 - Better way to organize info on book cover cards
 
 ## Post
@@ -39,7 +38,6 @@ underscores. Hyperfocused on readability.
 - Scroll down marker
 - On mobile: visually distinguish top of posts from post overviews
 - Add place for author links
-- ‘original title’ metadata field
 - Social media buttons
 
 ## Misc.
