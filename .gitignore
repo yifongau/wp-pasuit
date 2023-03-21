@@ -49,6 +49,8 @@ Thumbs.db
 *.zip
 
 # track these files, if they exist
+!.git
+!.github
 !.gitignore
 !.editorconfig
 !.scss-lint.yml
