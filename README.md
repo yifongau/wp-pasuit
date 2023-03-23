@@ -46,7 +46,6 @@ underscores. Hyperfocused on readability.
 - Add place for author links
 - Social media buttons
 
-## Misc.
 
 
 # Links

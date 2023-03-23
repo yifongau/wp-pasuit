@@ -1,7 +1,7 @@
 <?php
 
 /**
-Vereist voor het toevoegen en weergeven van boek-metadata bij signalementen
+Vereist voor het toevoegen van auteur v. signalement als metadata aan bericht.
 */
 
 
