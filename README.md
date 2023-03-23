@@ -27,6 +27,12 @@ underscores. Hyperfocused on readability.
 - Book author bio + further reading
 - Add search function/filter
 
+## Navigation
+
+- Smaller brandname in navbar
+- Buttons for previous/next post and randomnizer
+
+
 ## Post overviews
 
 - Uniform book cover cards
@@ -42,7 +48,6 @@ underscores. Hyperfocused on readability.
 
 ## Misc.
 
-- Smaller brandname in navbar
 
 # Links
 
