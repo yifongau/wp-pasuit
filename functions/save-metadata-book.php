@@ -31,70 +31,74 @@ function book_meta_box( $post ) {
 
 	<!-- Display fields to enter and edit source name and source address -->
 	<table>
+<em><p>Altijd invullen:</p></em>
 		<tr>
-			<td style="width: 100px">Titel</td>
+			<td style="width: 150px">Titel</td>
 			<td>
-				<input type='text' size="40" name='book_title' value='<?php echo $book_title; ?>' />
+				<input type='text' size="60" name='book_title' value='<?php echo $book_title; ?>' />
 			</td>
 		</tr>
 		<tr>
-			<td style="width: 100px">Oorspronkelijke titel (indien v.t.)</td>
+			<td style="width: 150px">Auteur</td>
 			<td>
-				<input type='text' size="40" name='book_title_orig' value='<?php echo $book_title_orig; ?>' />
+				<input type='text' size="60" name='book_author' value='<?php echo $book_author; ?>' />
+			</td>
+		</tr>
+    <tr>
+			<td style="width: 150px">Genre (voor de lezer)</td>
+			<td>
+				<input type='text' size="60" name='book_genre_frontend' placeholder='Zie ‘categorieën’.' readonly />
+			</td>
+		</tr>
+    <tr>
+			<td style="width: 150px">Genre (voor database)</td>
+			<td>
+      <input type='text' size="60" name='book_genre_backend' value='<?php echo $book_genre_backend; ?>' />
+      </td>
+		</tr>
+		<tr>
+			<td style="width: 150px">Uitgever</td>
+			<td>
+				<input type='text' size="60" name='book_publisher' value='<?php echo $book_publisher; ?>' />
 			</td>
 		</tr>
 		<tr>
-			<td style="width: 100px">Auteur</td>
+			<td style="width: 150px">Publicatiedatum</td>
 			<td>
-				<input type='text' size="40" name='book_author' value='<?php echo $book_author; ?>' />
+				<input type='text' size="60" name='book_pub_date' value='<?php echo $book_pub_date; ?>' />
 			</td>
 		</tr>
 		<tr>
-			<td style="width: 100px">Vertaler (indien v.t.)</td>
+			<td style="width: 150px">Aantal blz.</td>
 			<td>
-				<input type='text' size="40" name='book_translator' value='<?php echo $book_translator; ?>' />
+				<input type='text' size="60" name='book_pages' value='<?php echo $book_pages; ?>' />
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 150px">(Bron)taal</td>
+			<td>
+				<input type='text' size="60" name='book_source_lang' value='<?php echo $book_source_lang; ?>' />
+			</td>
+		</tr>
+  </table>
+<em><p>Invullen bij vertalingen:</p></em>
+	<table>
+		<tr>
+			<td style="width: 150px">Oorspronkelijke titel</td>
+			<td>
+				<input type='text' size="60" name='book_title_orig' value='<?php echo $book_title_orig; ?>' />
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 150px">Vertaler</td>
+			<td>
+				<input type='text' size="60" name='book_translator' value='<?php echo $book_translator; ?>' />
 			</td>
     </tr>
     <tr>
-			<td style="width: 100px">Genre (zichtbaar)</td>
+			<td style="width: 150px">Doeltaal (voor database)</td>
 			<td>
-				<input type='text' size="40" name='book_genre_frontend' value='Wordt bepaald door ‘categorie’.' readonly />
-			</td>
-		</tr>
-    <tr>
-			<td style="width: 100px">Genre</td>
-			<td>
-      <input type='text' size="40" name='book_genre_backend' value='<?php echo $book_genre_backend; ?>' />
-			</td>
-		</tr>
-		<tr>
-			<td style="width: 100px">Uitgever</td>
-			<td>
-				<input type='text' size="40" name='book_publisher' value='<?php echo $book_publisher; ?>' />
-			</td>
-		</tr>
-		<tr>
-			<td>Publicatiedatum</td>
-			<td>
-				<input type='text' size="40" name='book_pub_date' value='<?php echo $book_pub_date; ?>' />
-			</td>
-		</tr>
-		<tr>
-			<td>Aantal blz.</td>
-			<td>
-				<input type='text' size="40" name='book_pages' value='<?php echo $book_pages; ?>' />
-			</td>
-		</tr>
-		<tr>
-			<td>Brontaal</td>
-			<td>
-				<input type='text' size="40" name='book_source_lang' value='<?php echo $book_source_lang; ?>' />
-			</td>
-		</tr>
-		<tr>
-			<td>Doeltaal (indien v.t. )</td>
-			<td>
-				<input type='text' size="40" name='book_target_lang' value='<?php echo $book_target_lang; ?>' />
+				<input type='text' size="60" name='book_target_lang' value='<?php echo $book_target_lang; ?>' />
 			</td>
 		</tr>
 	</table>

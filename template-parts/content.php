@@ -26,15 +26,12 @@
 <h4>
   <?php echo get_post_meta( get_the_ID(), 'book_author', true) ?>
 </h4>
-<h4>
 <?php if ( !empty( get_post_meta( get_the_ID(), 'book_translator', true ) ) ) : ?>
-  (vert. <?php echo get_post_meta( get_the_ID(), 'book_translator', true) ?>)
+<h4>
+  (vert. <?php echo get_post_meta( get_the_ID(), 'book_translator', true) ?>)</h4>
 <?php endif; ?>
-</h4>
 <?php endif; ?>
-
         </div>
-      </div>
     </div>
 	</header><!-- .entry-header -->
 

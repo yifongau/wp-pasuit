@@ -20,9 +20,9 @@ function author_meta_box( $post ) {
 	?>
   <table>
     <tr>
-			<td style="width: 100px">Gesignaleerd door</td>
+			<td style="width: 150px">Gesignaleerd door</td>
 			<td>
-				<input type='text' size="40" name='real_author' value='<?php echo $real_author; ?>' />
+				<input type='text' size="60" name='real_author' value='<?php echo $real_author; ?>' />
 			</td>
 		</tr>
 	</table>
