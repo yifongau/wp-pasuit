@@ -5,9 +5,9 @@
  */
 
 // Custom post type
-add_action( 'init', 'create_book_authors_post_type' );
+add_action( 'init', 'create_book_author_post_type' );
 
-function create_book_authors_post_type() {
+function create_book_author_post_type() {
 	register_post_type( 'book_author',
 		array(
 				'labels' => array(
@@ -31,20 +31,22 @@ function create_book_authors_post_type() {
 		'taxonomies' => array( '' ),
 		'menu_icon' => 'dashicons-id-alt',
 		'has_archive' => 'yes',
-		'exclude_from_search' => false,
+    'exclude_from_search' => false,
+    'rewrite' => array( 'slug' => 'boekauteur' )
 		)
 	);
 }
 
 // Metadata for book authors
 
-add_action( 'admin_init', 'book_authors_admin_init' );
+add_action( 'admin_init', 'book_author_admin_init' );
 
-function book_authors_admin_init() {
-	add_meta_box( 'book_authors_meta_box', 'Biografie', 'display_book_authors_meta_box', 'book_author', 'normal', 'high' );
+function book_author_admin_init() {
+	add_meta_box( 'book_author_mb', 'Biografie', 'display_book_author_mb', 'book_author', 'normal', 'high' );
+	add_meta_box( 'book_author_posts_mb', 'Besproken titels', 'display_book_author_posts_mb', 'book_author', 'normal', 'high' );
 }
 
-function display_book_authors_meta_box( $book_author ) { 
+function display_book_author_mb( $book_author ) { 
 	$book_author_bio = get_post_meta( $book_author->ID, 'book_author_bio', true );
 ?>
 				<textarea style="max-width:100%;" rows="4" cols="75" name='book_author_bio'><?php echo $book_author_bio; ?></textarea>
@@ -64,6 +66,17 @@ function save_book_author_data( $book_author_id, $book_author ) {
 		update_post_meta( $book_author_id, 'book_author_bio', sanitize_text_field( $_POST['book_author_bio'] ) );
 	}
 
+}
+
+function display_book_author_posts_mb( $book_author ) { 
+?>
+	<table>
+		<tr>
+			<td>
+			</td>
+    </tr>
+
+<?php
 }
 
 ?>
