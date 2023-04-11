@@ -1,7 +1,5 @@
 on:
   workflow_dispatch: {}
-  release:
-    types: [published]
 name: 🚀 [STAGING] Deploy website
 jobs:
   web-deploy:
