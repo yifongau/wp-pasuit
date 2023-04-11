@@ -2,7 +2,7 @@ on:
   workflow_dispatch: {}
   release:
     types: [published]
-name: 🚀 Deploy website
+name: 🚀 [STAGING] Deploy website
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -18,4 +18,4 @@ jobs:
         username: jacqvogel1
         password: ${{ secrets.ftp_password }}
         protocol: ftps
-        server-dir: /domains/pasuit.nl/public_html/wp-content/themes/pasuit/
+        server-dir: /domains/pasuit.nl/public_html/staging/wp-content/themes/pasuit/
