@@ -8,45 +8,31 @@ underscores. Hyperfocused on readability.
 ## Refactor
 
 - [ ] Integrate parsa source/theme structure with pasuit.
-[] Make custom functions DRY.
+- [ ] Make custom functions DRY.
 
 ## Global
 
-[] Add signalement key word to page
-[] On page SEO optimisation
-- Accessibility improvements
+- [ ] Add "signalement" key word to page
+- [ ] On page SEO optimisation
+- [ ] Accessibility improvements
 
-## Typography
+## Design
 
-- Use relative sizing of fonts
-- Optimize typography on different viewports
+- [ ] Use relative sizing of fonts
+- [ ] Optimize typography on different viewports
+- [ ] Improve navbar (smaller brandname, fix spacing of dropdown)
+- [ ] Homepage: uniform book cover cards
+- [ ] Post: scroll down marker
+- [ ] On mobile: visually distinguish top of posts from post overviews
 
-## Major additions
+## Features
 
-- Guest author bio + list of 
-- Book author bio + further reading
-- Add search function/filter
-
-## Navigation
-
-- Smaller brandname in navbar
-- Buttons for previous/next post and randomnizer
-
-
-## Post overviews
-
-- Uniform book cover cards
-- Untranslated works listing
-- Better way to organize info on book cover cards
-
-## Post
-
-- Scroll down marker
-- On mobile: visually distinguish top of posts from post overviews
-- Add place for author links
-- Social media buttons
-
-
+- [ ] Guest author object
+- [ ] Book author object
+- [ ] Untranslated works list
+- [ ] Search function/filter
+- [ ] Previous/next post buttons
+- [ ] "Random" post button
 
 # Links
 
