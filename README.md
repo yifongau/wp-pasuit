@@ -33,7 +33,7 @@ underscores. Hyperfocused on readability.
 - [ ] Search function/filter
 - [ ] Previous/next post buttons
 - [ ] "Random" post button
-- [ ] Dynamic 'colofon', esp. author listing
+- [ ] Dynamic "colofon", esp. author listing
 
 # Links
 
