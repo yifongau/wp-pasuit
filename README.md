@@ -7,7 +7,7 @@ underscores. Hyperfocused on readability.
 
 ## Refactor
 
-[] Integrate parsa source/theme structure with pasuit.
+- [ ] Integrate parsa source/theme structure with pasuit.
 [] Make custom functions DRY.
 
 ## Global
