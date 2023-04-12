@@ -7,13 +7,13 @@ underscores. Hyperfocused on readability.
 
 ## Refactor
 
-- Integrate parsa source/theme structure with pasuit.
-- Make custom functions DRY.
+[] Integrate parsa source/theme structure with pasuit.
+[] Make custom functions DRY.
 
 ## Global
 
-- Add signalement key word to page
-- On page SEO optimisation
+[] Add signalement key word to page
+[] On page SEO optimisation
 - Accessibility improvements
 
 ## Typography
