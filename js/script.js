@@ -15,7 +15,7 @@
   });
 
   // headroom js
-  $("#header").headroom() 
+  $("#header").headroom();
 
 
   // Masonry
