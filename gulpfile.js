@@ -11,9 +11,8 @@ const notify = require("gulp-notify");
 
 var path = {
   src: {
-    plugins: "source/plugins/**/*.*",
+    scss: "source/scss/**/*.scss",
     js: "source/js/*.js",
-    scss: "scss/**/*.scss",
   },
   build: {
     dirBuild: "./",
@@ -32,7 +31,7 @@ gulp.task("scss:build", function () {
     )
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("/"))
-    .pipe(gulp.dest(path.build.dirDev + "css/"))
+    .pipe(gulp.dest(path.build.dirBuild + "css/"))
 });
 
 // Javascript
@@ -51,75 +50,21 @@ gulp.task("js:build", function () {
     )
     .pipe(jshint.reporter("jshint-stylish"))
     .on("error", gutil.log)
-    .pipe(gulp.dest(path.build.dirDev + "js/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
+    .pipe(gulp.dest(path.build.dirBuild + "js/"))
 });
 
-// fonts
-gulp.task("fonts:build", function () {
-  return gulp
-    .src(path.src.fonts)
-    .pipe(gulp.dest(path.build.dirDev + "fonts/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
-});
-
-// Plugins
-gulp.task("plugins:build", function () {
-  return gulp
-    .src(path.src.plugins)
-    .pipe(gulp.dest(path.build.dirDev + "plugins/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
-});
-
-// Clean Build Folder
-gulp.task("clean", function (cb) {
-  rimraf("./theme", cb);
-});
-
-// Error Message Show
-function customPlumber(errTitle) {
-  return plumber({
-    errorHandler: notify.onError({
-      // Customizing error title
-      title: errTitle || "Error running Gulp",
-      message: "Error: <%= error.message %>",
-      sound: "Glass",
-    }),
-  });
-}
 
 // Watch Task
 gulp.task("watch:build", function () {
-  gulp.watch(path.src.html, gulp.series("html:build"));
-  gulp.watch(path.src.htminc, gulp.series("html:build"));
   gulp.watch(path.src.scss, gulp.series("scss:build"));
-  gulp.watch(path.src.js, gulp.series("js:build"));
-  gulp.watch(path.src.images, gulp.series("images:build"));
-  gulp.watch(path.src.fonts, gulp.series("fonts:build"));
-  gulp.watch(path.src.plugins, gulp.series("plugins:build"));
+ // gulp.watch(path.src.js, gulp.series("js:build"));
 });
 
 // Build Task
 gulp.task(
   "build",
   gulp.series(
-    "html:build",
-    "js:build",
-    "scss:build",
-    "images:build",
-    "fonts:build",
-    "plugins:build"
+//    "js:build",
+    "scss:build"
   )
 );
