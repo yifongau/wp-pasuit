@@ -16,6 +16,11 @@ underscores. Hyperfocused on readability.
 - [ ] On page SEO optimisation
 - [ ] Accessibility improvements
 
+## Metadata
+
+- [ ] Oorspronkelijk jaar van uitgave?
+- [ ] Aanvullende informatieregel
+
 ## Design
 
 - [ ] Fix mason.js on index pages.
