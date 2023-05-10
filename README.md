@@ -18,21 +18,23 @@ underscores. Hyperfocused on readability.
 
 ## Design
 
+- [ ] Fix mason.js on index pages.
+- [ ] On mobile: visually distinguish top of posts from post overviews
 - [ ] Use relative sizing of fonts
 - [ ] Optimize typography on different viewports
+- [ ] Fix behavior of inline images (large screens vs. small screens)
 - [ ] Improve navbar (smaller brandname, fix spacing of dropdown)
 - [ ] Homepage: uniform book cover cards
 - [ ] Post: scroll down marker
-- [ ] On mobile: visually distinguish top of posts from post overviews
 
 ## Features
 
-- [ ] Guest author object
-- [ ] Book author object
-- [ ] Untranslated works list
-- [ ] Search function/filter
+- [ ] Untranslated works filter
 - [ ] Previous/next post buttons
 - [ ] "Random" post button
+- [ ] Search function/filter
+- [ ] Guest author object
+- [ ] Book author object
 - [ ] Dynamic "colofon", esp. author listing
 
 # Links
