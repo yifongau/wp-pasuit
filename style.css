@@ -22,25 +22,8 @@ pasuit is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
-
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
-
-/*!------------------------------------------------------------------
-[MAIN STYLESHEET]
-
-PROJECT:	Project Name
-VERSION:	Versoin Number
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[TABLE OF CONTENTS]
--------------------------------------------------------------------*/
 /*  typography */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
   line-height: 1.5;
   font-family: "Atkinson Hyperlegible", sans-serif;
@@ -51,7 +34,7 @@ body {
 
 p, .paragraph {
   font-weight: 400;
-  font-size: 21px;
+  font-size: 15px;
   line-height: 1.5;
   font-family: "Atkinson Hyperlegible", sans-serif;
 }
@@ -100,7 +83,7 @@ h6, .h6 {
 /* Button style */
 .btn {
   font-size: 15px;
-  font-family: "Inter", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
   text-transform: capitalize;
   padding: 8px 20px;
   border-radius: 0;
@@ -196,13 +179,13 @@ body {
   background: #ff6f00;
   border-radius: 50%;
   transform: translateX(0);
-  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
 }
 .preloader .loader .dots {
   transform: translateX(0);
   margin-top: 12px;
   margin-left: 31px;
-  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
 }
 .preloader .loader .dots span {
   display: block;
@@ -213,19 +196,9 @@ body {
   background: #ff6f00;
   border-radius: 50%;
 }
-@-webkit-keyframes dot {
-  50% {
-    transform: translateX(96px);
-  }
-}
 @keyframes dot {
   50% {
     transform: translateX(96px);
-  }
-}
-@-webkit-keyframes dots {
-  50% {
-    transform: translateX(-31px);
   }
 }
 @keyframes dots {
@@ -344,7 +317,7 @@ a:hover, a.text-dark:hover {
 }
 
 .font-secondary {
-  font-family: "Atkinson Hyperlegible" !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 .mb-10 {
@@ -415,7 +388,6 @@ textarea.form-control {
 }
 
 .headroom {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -560,7 +532,7 @@ textarea.form-control {
   }
 }
 .pagination .page-item .page-link {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 30px;
   border: 0;
   color: #585757;
@@ -786,5 +758,4 @@ blockquote {
 .tag-list li a:hover {
   color: #ff6f00;
 }
-
 /*# sourceMappingURL=style.css.map */

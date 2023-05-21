@@ -31,7 +31,7 @@ gulp.task("scss:build", function () {
     )
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("/"))
-    .pipe(gulp.dest(path.build.dirBuild + "css/"))
+    .pipe(gulp.dest(path.build.dirBuild))
 });
 
 // Javascript
@@ -64,7 +64,7 @@ gulp.task("watch:build", function () {
 gulp.task(
   "build",
   gulp.series(
-//    "js:build",
+    "js:build",
     "scss:build"
   )
 );
