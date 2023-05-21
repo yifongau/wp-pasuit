@@ -7,7 +7,7 @@
   });
 
   // headroom js
-  $('.navigation').headroom();
+//  $('.navigation').headroom();
 
   // Background-images
   $('[data-background]').each(function () {
@@ -48,8 +48,9 @@
   $(document).ready(function () {
     $('.masonry-container').masonry({
       itemSelector: '.masonry-container > div',
-      columnWidth: 1
+      columnWidth: 1,
     });
   });
+
 
 })(jQuery);

@@ -12,8 +12,8 @@
 <?php
 		if ( !is_singular() ) :
 ?>
-<a class="text-dark" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
       <div class="col-lg-4 col-sm-6 mb-5">
+<a class="text-dark" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
 <article class="text-center" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
 <img class="img-fluid mb-4" src="<?php echo $url ?>" />
