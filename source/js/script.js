@@ -45,11 +45,11 @@
   });
 
   // Masonry
-  $(document).ready(function () {
-    $('.masonry-container').masonry({
-      itemSelector: '.masonry-container > div',
-      columnWidth: 1
-    });
-  });
-
+//  $(document).ready(function () {
+//    $('.masonry-container').masonry({
+//      itemSelector: '.masonry-container > div',
+//      columnWidth: 1
+//    });
+//  });
+//
 })(jQuery);
