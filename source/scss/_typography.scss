@@ -11,7 +11,7 @@ body {
 
 p, .paragraph {
   font-weight: 400;
-  font-size: 21px;
+  font-size: clamp(17px, 3vw, 21px);
   line-height: 1.5;
   font-family: $primary-font;
 }
