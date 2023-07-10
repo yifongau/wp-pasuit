@@ -19,6 +19,11 @@ get_header();
 
 <section class="section">
   <div class="container">
+  <div class="row">
+					<div class="col-lg-4 col-sm-6 justify-content-center mb-5">
+						<?php get_search_form(); ?>
+          </div>
+</div>
     <div class="row masonry-container">
 
 		<?php
@@ -31,6 +36,9 @@ get_header();
 				</header>
 				<?php
 			endif;
+          ?>
+
+					<?php
 
 			/* Start the Loop */
 while ( have_posts() ) :
