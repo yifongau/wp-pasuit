@@ -2,7 +2,7 @@ on:
   workflow_dispatch: {}
   release:
     types: [published]
-name: 🚀 [STAGING] Deploy staging website
+name: 🚀 [DEV] Deploy website to development
 jobs:
   web-deploy:
     name: 🎉 Deploy
