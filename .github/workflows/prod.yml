@@ -1,6 +1,6 @@
 on:
   workflow_dispatch: {}
-name: 🚀 [LIVE] Deploy live website
+name: 🚀 [PROD] Deploy website to production
 jobs:
   web-deploy:
     name: 🎉 Deploy
