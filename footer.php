@@ -25,7 +25,8 @@
           <ul class="list-unstyled">
             <li class="font-secondary text-dark">Tommy van Avermaete</li>
             <li class="font-secondary text-dark">Charlotte van Rooden</li>
-            <li class="font-secondary text-dark">Obe Alkema</li>
+            <li class="font-secondary text-dark">Nike van Helden</li>
+            <li class="font-secondary text-dark">Goran Bouaziz</li>
             <li class="font-secondary text-dark">Yi Fong Au (webmaster)</li>
             <p>
           </ul>
